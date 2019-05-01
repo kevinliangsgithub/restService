@@ -6,7 +6,7 @@
 
 prog=service_demo
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-0.el7_5.x86_64
-export DEPLOY_PATH=/product_service
+export DEPLOY_PATH=~/restService
 export DEBUG_PORT=11525
 
 if [ ! -d $JAVA_HOME ];then
@@ -36,7 +36,6 @@ export TIME_ZONE="-Duser.timezone=GMT+08"
 
 ${JAVA_HOME}/bin/java ${JAVA_OPTIONS} ${JAVA_DEBUG} ${TIME_ZONE}\
 -Dcom.dc.install_path=${DEPLOY_PATH}/resources \
--classpath ${CLASSPATH} com.edison.admin.AdminApplication $prog &
+-classpath ${CLASSPATH} com.restservice.restService.RestServiceApplication $prog &
 
-tail -F aaa
 

@@ -25,5 +25,4 @@ hs_err_pid*
 *.iml
 /.mvn/*
 
-dq-griffin/target
-dq-service/target
+restService/target
