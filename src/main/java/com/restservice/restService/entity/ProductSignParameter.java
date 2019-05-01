@@ -1,6 +1,5 @@
 package com.restservice.restService.entity;
 
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -10,11 +9,11 @@ import java.util.Map;
  * @Date 2019-04-30 11:20
  * @Version 1.0
  **/
-public class ProductParameter {
+public class ProductSignParameter {
 
   private Map<String, Object> status;
 
-  private List<List<Map<String, Object>>> data;
+  private Map<String, String> data;
 
   public Map<String, Object> getStatus() {
     return status;
@@ -24,12 +23,11 @@ public class ProductParameter {
     this.status = status;
   }
 
-  public List<List<Map<String, Object>>> getData() {
+  public Map<String, String> getData() {
     return data;
   }
 
-  public void setData(
-      List<List<Map<String, Object>>> data) {
+  public void setData(Map<String, String> data) {
     this.data = data;
   }
 }

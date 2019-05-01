@@ -9,30 +9,37 @@ package com.restservice.restService.api.ao;
  **/
 public class ProductPararmeterAO {
 
-    private String url;
-    private String parameterNames;
+  private String url;
+  private String method;
+  private String parameterNames;
 
-    public String getUrl() {
-        return url;
-    }
+  public ProductPararmeterAO(String url, String method, String parameterNames) {
+    this.url = url;
+    this.method = method;
+    this.parameterNames = parameterNames;
+  }
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+  public String getUrl() {
+    return url;
+  }
 
-    public String getParameterNames() {
-        return parameterNames;
-    }
+  public void setUrl(String url) {
+    this.url = url;
+  }
 
-    public void setParameterNames(String parameterNames) {
-        this.parameterNames = parameterNames;
-    }
+  public String getMethod() {
+    return method;
+  }
 
-    public ProductPararmeterAO() {
-    }
+  public void setMethod(String method) {
+    this.method = method;
+  }
 
-    public ProductPararmeterAO(String url, String parameterNames) {
-        this.url = url;
-        this.parameterNames = parameterNames;
-    }
+  public String getParameterNames() {
+    return parameterNames;
+  }
+
+  public void setParameterNames(String parameterNames) {
+    this.parameterNames = parameterNames;
+  }
 }
