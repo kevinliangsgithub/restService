@@ -11,7 +11,7 @@
   </parent>
 
   <groupId>com.restservice</groupId>
-  <artifactId>restService</artifactId>
+  <artifactId>rest-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>restService</name>
   <description>Demo project for Spring Boot</description>
@@ -133,14 +133,14 @@
           <!--</execution>-->
         </executions>
         <configuration>
-          <entryPoint>["sh","/product_service/bin/start.sh"]</entryPoint>
+          <!--<entryPoint>["sh","/product_service/bin/start.sh"]</entryPoint>-->
           <imageName>dp-service-demo:1.0.0</imageName>
           <dockerDirectory>${project.build.directory}</dockerDirectory>
           <buildArgs>
-            <JAR_FILE>${project.build.finalName}.jar.original</JAR_FILE>
+            <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
             <LIB_FILE>lib/*.jar</LIB_FILE>
-            <BIN_FILE>classes/resources/bin/*.sh</BIN_FILE>
-            <RES_FILE>classes/resources/*</RES_FILE>
+            <BIN_FILE>classes/bin/*.sh</BIN_FILE>
+            <RES_FILE>classes/*</RES_FILE>
           </buildArgs>
         </configuration>
       </plugin>
