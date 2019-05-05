@@ -36,7 +36,8 @@ public class ProductServiceImpl implements ProductService {
     if ("data".equals(parameterNames)) {
       parameterValue = "{\"shopIds\":[\"1BH22UAGS4PJPM002OV181J0ETBGUJ51\"],\"fromDate\":\"20190422\",\"toDate\":\"20190423\"}";
     } else if ("timestamp".equals(parameterNames)) {
-      parameterValue = String.valueOf(System.currentTimeMillis());
+      String demoTimeStamp = "1556506357000";
+      parameterValue = String.valueOf(demoTimeStamp);
     }
 
     ProductParameter productParameter = new ProductParameter();
