@@ -6,7 +6,7 @@
 
 prog=service_demo
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-0.el7_5.x86_64
-export DEPLOY_PATH=~/restService
+export DEPLOY_PATH=/product_service
 export DEBUG_PORT=11525
 
 if [ ! -d $JAVA_HOME ];then
@@ -39,3 +39,4 @@ ${JAVA_HOME}/bin/java ${JAVA_OPTIONS} ${JAVA_DEBUG} ${TIME_ZONE}\
 -classpath ${CLASSPATH} com.restservice.restService.RestServiceApplication $prog &
 
 
+tail -F /home/log/dp_rest_service/dp_rest_service_info
