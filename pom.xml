@@ -106,6 +106,12 @@
         </includes>
         <targetPath>${build.outputDirectory}/../</targetPath>
       </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </resource>
     </resources>
     <plugins>
       <plugin>
