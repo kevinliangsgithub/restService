@@ -11,9 +11,9 @@
   </parent>
 
   <groupId>com.restservice</groupId>
-  <artifactId>rest-service</artifactId>
+  <artifactId>restservice</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>restService</name>
+  <name>restservice</name>
   <description>Demo project for Spring Boot</description>
 
   <properties>
@@ -89,6 +89,24 @@
   </dependencies>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>Dockerfile</exclude>
+        </excludes>
+        <targetPath>${build.outputDirectory}/resources</targetPath>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>
+            Dockerfile
+          </include>
+        </includes>
+        <targetPath>${build.outputDirectory}/../</targetPath>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -134,13 +152,13 @@
         </executions>
         <configuration>
           <!--<entryPoint>["sh","/product_service/bin/start.sh"]</entryPoint>-->
-          <imageName>dp-service-demo:1.0.0</imageName>
+          <imageName>dp-service-api:1.0.0</imageName>
           <dockerDirectory>${project.build.directory}</dockerDirectory>
           <buildArgs>
             <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
             <LIB_FILE>lib/*.jar</LIB_FILE>
-            <BIN_FILE>classes/bin/*.sh</BIN_FILE>
-            <RES_FILE>classes/*</RES_FILE>
+            <BIN_FILE>classes/resources/bin/*.sh</BIN_FILE>
+            <RES_FILE>classes/resources/*</RES_FILE>
           </buildArgs>
         </configuration>
       </plugin>
