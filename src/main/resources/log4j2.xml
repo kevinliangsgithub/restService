@@ -9,7 +9,7 @@
     <!--服务名称/日志文件名称-->
     <Property name="SERVICE_NAME">dp_rest_service</Property>
     <!--日志保存路径-->
-    <Property name="LOG_FILE_PATH">/home/log/${SERVICE_NAME}</Property>
+    <Property name="LOG_FILE_PATH">/data/log/${SERVICE_NAME}</Property>
     <!--日志输出级别-->
     <Property name="ROOT_LOG_LEVEL">INFO</Property>
     <!--========-->
